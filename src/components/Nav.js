@@ -10,10 +10,10 @@ function NavigationsBar() {
   return (
     <Container>
       <Row>
-        <Col md={2}>
+        <Col md={1}>
           {/* Empty column for spacing */}
         </Col>
-        <Col md={8}>
+        <Col md={10}>
           <Navbar className="bg-body-tertiary" expand="lg">
             <Container>
               <Navbar.Brand href="#home">
@@ -38,7 +38,7 @@ function NavigationsBar() {
             </Container>
           </Navbar>
         </Col>
-        <Col md={2}>
+        <Col md={1}>
           {/* Empty column for spacing */}
         </Col>
       </Row>
