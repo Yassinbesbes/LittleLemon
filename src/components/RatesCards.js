@@ -17,7 +17,7 @@ const RatesCard = ({ rating, name, image, review }) => {
   };
 
   return (
-    <Card className="shadow-sm p-3 mb-5 bg-white rounded">
+    <Card className="shadow-sm p-3 mb-5 bg-white rounded h-100" style={{ minHeight: '300px' }}>
       <Card.Body>
         <div className="text-center mb-2">{renderStars(rating)}</div>
         <div className="d-flex justify-content-center mb-3">
@@ -72,13 +72,12 @@ const ReviewsSection = () => {
 
   return (
     <div className="pt-5">
-    <div style={{ backgroundColor: "#D9D9D9", padding: "5%" }} >
-      <h1 style={{ textAlign: "center" }}>Testimonials</h1>
-        <Row className="d-flex justify-content-center align-items-center">
+      <div style={{ backgroundColor: "#D9D9D9", padding: "5%" }}>
+        <h1 style={{ textAlign: "center" }}>Testimonials</h1>
+        <Row className="d-flex justify-content-center align-items-stretch">
           <Col md={2}></Col>
-
           {reviews.map((review, index) => (
-            <Col key={index}>
+            <Col md={2} key={index} className="d-flex align-items-stretch">
               <RatesCard
                 rating={review.rating}
                 name={review.name}
@@ -89,7 +88,7 @@ const ReviewsSection = () => {
           ))}
           <Col md={2}></Col>
         </Row>
-    </div>
+      </div>
     </div>
   );
 };
